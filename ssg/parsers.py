@@ -34,7 +34,7 @@ class Parser():
 
 class ResourceParser(Parser):
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
 
     extensions = [".jpg", ".png", ".gif", ".css", ".html"]
 
@@ -46,7 +46,7 @@ class MarkdownParser(Parser):
     extensions = [".md", ".markdown",]
 
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
 
     def parse(self, path, source, dest):
         content = Content.load(self.read(path))
@@ -59,7 +59,7 @@ class ReStructuredTextParser(Parser):
     extensions = [".rst",]
 
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
 
     def parse(self, path, source, dest):
         content = Content.load(self.read(path))
